@@ -3,11 +3,13 @@ FROM node:18 AS build
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
-COPY . .
 
-# 建置時傳入環境變數
+# 重要：在 COPY . . 之前先設定 ARG
 ARG REACT_APP_API_URL
 ENV REACT_APP_API_URL=$REACT_APP_API_URL
+
+# 複製程式碼，但 .env 會被 Railway 的環境變數覆蓋
+COPY . .
 
 RUN npm run build
 
