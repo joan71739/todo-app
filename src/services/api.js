@@ -14,7 +14,7 @@ export async function apiFetch(path, options = {}) {
 
 
     // 只有在非登入請求且驗證失敗時才跳轉
-    if (res.status === 401 && path !== '/login') {
+    if (res.status !== 200 && path !== '/login') {
         localStorage.removeItem('token');
         window.location.href = '/login';
         return { status: res.status, data: null };
