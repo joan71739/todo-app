@@ -31,7 +31,7 @@ function Login() {
             style={{ minHeight: '100vh' }}
         >
             <h1 className="fw-bold mb-5 mt-3 text-center text-success">任務管理系統</h1>
-            <Card style={{ width: '30rem' }} className="shadow">
+            <Card className="shadow w-100" style={{ maxWidth: '30rem' }}>
                 <Card.Body>
                     <h3 className="mb-4 text-center">登入</h3>
                     <Form onSubmit={handleSubmit}>

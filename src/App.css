@@ -2,3 +2,85 @@
     text-align: center;
     font-size: 50px;
 }
+
+/* 手機響應式設計 */
+@media (max-width: 600px) {
+    body {
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    .App {
+        font-size: 28px;
+        padding: 8px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-size: 1.2em;
+    }
+
+    nav,
+    footer {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+
+    /* 表單欄位響應式 */
+    form,
+    .form-row,
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+    }
+    .add-task-row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 8px !important;
+    }
+
+    input,
+    select,
+    button {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    label {
+        font-size: 15px;
+        margin-bottom: 4px;
+    }
+
+    .add-task-btn {
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    /* 表格響應式設計 */
+    .table-responsive {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+        width: 100%;
+        min-width: 480px;
+        border-collapse: collapse;
+        font-size: 15px;
+    }
+
+    th,
+    td {
+        padding: 6px;
+        word-break: break-all;
+        text-align: left;
+    }
+
+    /* 若表格欄位太多可橫向滾動 */
+}

@@ -309,7 +309,7 @@ function Default() {
                 </div>
             )}
             {/* 新增任務 */}
-            <div style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <div className="add-task-row" style={{ marginBottom: '1rem', display: 'flex', alignItems: ' center', gap: '0.5rem' }}>
                 <Form.Control
                     type="text"
                     placeholder="任務標題"
@@ -341,15 +341,17 @@ function Default() {
                 />
                 <Button variant="outline-primary" onClick={handleAdd}>新增任務</Button>
             </div>
-            <DataTable
-                columns={columns}
-                data={tasks}
-                pagination
-                highlightOnHover
-                striped
-                customStyles={customStyles}
-                paginationComponentOptions={paginationComponentOptions}
-            />
+            <div className="table-responsive">
+                <DataTable
+                    columns={columns}
+                    data={tasks}
+                    pagination
+                    highlightOnHover
+                    striped
+                    customStyles={customStyles}
+                    paginationComponentOptions={paginationComponentOptions}
+                />
+            </div>
             {/* 編輯表單（只有選取任務時顯示） */}
             {editingId && (
                 <Card id="edit-card" style={{ marginTop: '1rem', padding: '1rem' }}>
