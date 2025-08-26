@@ -17,9 +17,6 @@ function NavScrollExample({ setActiveTab, isLogin, onLogout }) {
                     >
                         <Nav.Link href="#" onClick={() => setActiveTab('Default')}>首頁</Nav.Link>
                     </Nav>
-                    <Nav className="ms-auto">
-                        <Nav.Link href="#" onClick={() => setActiveTab('Member')}>會員資訊</Nav.Link>
-                    </Nav>
                     {isLogin && (
                         <Button variant="outline-danger" onClick={onLogout} style={{ width: '5rem' }}>
                             登出
