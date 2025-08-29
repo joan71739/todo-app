@@ -39,7 +39,7 @@ function Default() {
     const doneCount = tasks.filter(t => t.status === '已完成').length;
     // 今日到期計算
     const today = new Date().toISOString().slice(0, 10);
-    const dueTodayCount = tasks.filter(t => t.due === today).length;
+    const dueTodayCount = tasks.filter(t => t.due.replace(/\//g, '-') === today).length;
 
 
     //datatables使用
