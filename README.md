@@ -129,7 +129,7 @@ DELETE /api/tasks?id=:id # 刪除任務
 
 **Joan**
 - GitHub: [@joan71739](https://github.com/joan71739)
-- Email: [your-email@example.com]
+- Email: [joan71739@gmail.com]
 
 ---
 
@@ -145,7 +145,7 @@ DELETE /api/tasks?id=:id # 刪除任務
 )
 
 ### 任務管理
-功能完整的任務列表，支援排序、搜尋和批次操作。
+功能完整的任務列表，支援排序。
 ![任務管理](./images/taskList.png)
 ![任務編輯](./images/taskEdit.png)
 
