@@ -19,7 +19,7 @@
 - 🔄 任務狀態管理（待辦、進行中、已完成）
 - 📅 截止日期設定和追蹤
 - 📝 任務詳細說明
-- 🔍 任務欄位排序
+- 🔍 任務搜尋和排序
 
 ### 📊 資料視覺化
 - 📈 任務狀態統計卡片
@@ -137,21 +137,15 @@ DELETE /api/tasks?id=:id # 刪除任務
 
 ### 登入頁面
 現代化的登入介面，支援帳號密碼驗證。
-![登入頁面](./images/login.png)
+![登入頁面](./images/login-screenshot.png)
 
 ### 任務總覽
 清楚的狀態卡片顯示，一目了然的任務統計。
-![任務總覽](./images/taskCard.png
-)
+![任務總覽](./images/overview-screenshot.png)
 
 ### 任務管理
-功能完整的任務列表，支援排序。
-![任務管理](./images/taskList.png)
-![任務編輯](./images/taskEdit.png)
-
-
-### 手機介面
-![任務編輯](./images/phone.png)
+功能完整的任務列表，支援排序、搜尋和批次操作。
+![任務管理](./images/tasklist-screenshot.png)
 
 ---
 

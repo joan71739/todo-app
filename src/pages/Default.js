@@ -7,11 +7,7 @@ import CardBody from 'react-bootstrap/esm/CardBody';
 import { apiFetch } from '../services/api'
 
 function Default() {
-    // const [tasks, setTasks] = useState([
-    //     // 範例資料
-    //     { id: 1, title: '學習 React', status: '待辦', detail: '需要學習時間48小時', due: '2025-08-20' },
-    //     { id: 2, title: '寫作業', status: '進行中', detail: '', due: '2025-07-02' },
-    // ]);
+
 
     const [tasks, setTasks] = useState([]);
     const [errorMsg, setErrorMsg] = useState('');
@@ -44,9 +40,6 @@ function Default() {
     // 今日到期計算
     const today = new Date().toISOString().slice(0, 10);
     const dueTodayCount = tasks.filter(t => t.due === today).length;
-
-
-
 
 
     //datatables使用
