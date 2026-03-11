@@ -37,9 +37,14 @@ function Default() {
     const todoCount = tasks.filter(t => t.status === '待辦').length;
     const doingCount = tasks.filter(t => t.status === '進行中').length;
     const doneCount = tasks.filter(t => t.status === '已完成').length;
-    // 今日到期計算
+    // 今日到期計算（截至今日：日期小於等於今天）
     const today = new Date().toISOString().slice(0, 10);
-    const dueTodayCount = tasks.filter(t => t.due.replace(/\//g, '-') === today).length;
+    // Normalize stored due format (YYYY/MM/DD or YYYY-MM-DD) to YYYY-MM-DD and compare lexicographically
+    const dueTodayCount = tasks.filter(t => {
+        if (!t.due) return false;
+        const dueNormalized = t.due.replace(/\//g, '-');
+        return dueNormalized <= today;
+    }).length;
 
 
     //datatables使用
